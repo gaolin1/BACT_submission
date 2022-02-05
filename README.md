@@ -26,3 +26,8 @@ to run the script, either
     * please remember to add the excel extension at the end (xlsx.
     * to export within the same directory, simply enter the file name (sample.xlsx).
 * Second function: Web visualization tool for organism counts
+  * <img width="759" alt="image" src="https://user-images.githubusercontent.com/28236780/152625345-74a3d27e-fbe3-48f8-a712-f6ee45371678.png">
+  * enter "Y" to launch the streamlit app
+  * first use **browse files** to selec the processed file
+  * then select either "complete data" or "first specimen only" 
+  * 
