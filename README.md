@@ -30,4 +30,8 @@ to run the script, either
   * enter "Y" to launch the streamlit app
   * first use **browse files** to selec the processed file
   * then select either "complete data" or "first specimen only" 
-  * 
+  * <img width="759" alt="image" src="https://user-images.githubusercontent.com/28236780/152625728-54d6bf0d-b262-4078-80df-2a358e8c3483.png">
+  * choose desired organisms, followed by antibiotic, interpretation, and specimen type.
+    * to note: antibiotic, interpretation and specimen type will be filter subsequent selections. 
+  * <img width="744" alt="image" src="https://user-images.githubusercontent.com/28236780/152625863-57436241-4310-4ad5-8c30-e3235e72f076.png">
+  * then the data table will appear, followed by a count of unique specimen IDs 
