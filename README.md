@@ -13,7 +13,7 @@ to run the script, either
 ---
 
 ### This script has two function options
-<img width="455" alt="image" src="https://user-images.githubusercontent.com/28236780/152625057-0fc18684-3319-4672-9155-2cf6a32a004b.png">
+> <img width="455" alt="image" src="https://user-images.githubusercontent.com/28236780/152625057-0fc18684-3319-4672-9155-2cf6a32a004b.png">
 * First function: Process Epic exported file
   * enter "Y" to enter the first function.
   * first prompt will ask for number of files to be processed/combined.
@@ -26,7 +26,7 @@ to run the script, either
     * please remember to add the excel extension at the end (xlsx.
     * to export within the same directory, simply enter the file name (sample.xlsx).
 ---
-<img width="491" alt="image" src="https://user-images.githubusercontent.com/28236780/152627151-da286fb3-9c4b-4214-9311-ec53316280bc.png">
+> <img width="491" alt="image" src="https://user-images.githubusercontent.com/28236780/152627151-da286fb3-9c4b-4214-9311-ec53316280bc.png">
 * Second function: Web visualization tool for organism counts
   * enter "Y" to launch the streamlit app
   * <img width="759" alt="image" src="https://user-images.githubusercontent.com/28236780/152625345-74a3d27e-fbe3-48f8-a712-f6ee45371678.png">
