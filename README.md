@@ -5,12 +5,12 @@
 2. [msoffcypto](https://github.com/nolze/msoffcrypto-tool) (command: `pip install msoffcrypto-tool`)
 3. [streamlit](https://streamlit.io) (command: `pip install streamlit`)
 4. [numpy](https://numpy.org/install/) (command: `pip install numpy`)
-
+---
 
 to run the script, either 
 1. enter `python3 find_it.py` in terminal (mac) or cmd (windows)
 2. use right click on the find_it.py file and launch with **python launcher** 
-
+---
 
 ### This script has two function options
 * First function: Process Epic exported file
