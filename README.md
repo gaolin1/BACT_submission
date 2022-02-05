@@ -14,13 +14,15 @@ to run the script, either
 
 ### This script has two function options
 * First function: Process Epic exported file
-  * <img width="455" alt="image" src="https://user-images.githubusercontent.com/28236780/152615692-a0bee851-de38-4c9a-8a0f-cde229bcba1d.png">
+  * <img width="455" alt="image" src="https://user-images.githubusercontent.com/28236780/152625057-0fc18684-3319-4672-9155-2cf6a32a004b.png">
+  * enter "Y" to enter the first function.
   * first prompt will ask for number of files to be processed/combined.
   * (this is due to limitations of Epic Find Susceptibility Report limiting to 6 months.)
-  * Then enter path to the first file, password, then repeat for all reports.
-  * Script will perform data transformation and export out two dataframes:
+  * then enter path to the first file, password, then repeat for all reports.
+  * script will perform data transformation and export out two dataframes and export out as excel files:
     * gram positives (first specimen removed, contains only Staphylococcus aureus, Enterococcus (excluding gallinarum and casseliflavus))
-    * all results   
-  * Finally, enter path to procssed file with two excel pages (Complete and Frist Specimen (Gram Positive))
-    * to export within the same directory, simply enter the file name (sample.xlsx)
+    * all results (unfiltered)   
+  * Finally, enter path to procssed file with two excel pages (Complete and Frist Specimen (Gram Positive)).
+    * please remember to add the excel extension at the end (xlsx.
+    * to export within the same directory, simply enter the file name (sample.xlsx).
 * Second function: Web visualization tool for organism counts
