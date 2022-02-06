@@ -11,7 +11,7 @@ def main():
     try:
         df_complete, df_gp = import_df_web()
         type = st.radio("Select a data source",["complete data", "gram-positive specimens"])
-        msg = "for gram-positive specimens, data has been filtered for first specimens only \nand Enterococcus gallinarum and casseliflavus has also been excluded."
+        msg = "for gram-positive specimens, data have been filtered for first specimens only. \nStaphylococcus aureus, Enterococcus gallinarum and casseliflavus have also \nbeen excluded."
         st.text(msg)
         if type == "complete data":
             complete_data(df_complete)
@@ -50,10 +50,9 @@ def prepare_df(df):
     df = df.set_index("Organism")  
     return df
 
-
 def checkbox(df,organism, type):
     try:
-        df_filtered = df.loc[organism]
+        df_filtered = df[df.index.isin(organism)]
         var_list = df_filtered[type].unique().tolist()
         container = st.container()
         all = st.checkbox("Select all " + type)

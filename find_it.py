@@ -13,10 +13,13 @@ import sys
 from streamlit import cli as stcli
 
 def main():
-    df = import_combined()
-    df_complete = pivot(df)
-    df_removed = remove_first_specimen(df, df_complete)
-    export_df(df, df_removed)
+    process_input = input("Process Epic Exported File? (Y/N): ")
+    while process_input not in ("Y", "N"):
+        process_input = input("Please enter either Y or N: ")
+    if process_input == "Y":
+        processed_df()
+    else:
+        pass
     launch_input = input("Launch dashboard app? (Y/N): ")
     while launch_input not in ("Y", "N"):
         launch_input = input("Please enter either Y or N: ")
@@ -25,6 +28,12 @@ def main():
         sys.exit(stcli.main())
     else:
         quit()
+
+def processed_df():
+    df = import_combined()
+    df_complete = pivot(df)
+    df_removed = remove_first_specimen(df, df_complete)
+    export_df(df, df_removed)
 
 def import_df():
     df = st.file_uploader("Upload Epic export", type=["xlsx"])
