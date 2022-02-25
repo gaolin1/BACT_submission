@@ -41,4 +41,4 @@ to run the script, either
     * to note: antibiotic, interpretation and specimen type will be filter subsequent selections. 
   * <img width="744" alt="image" src="https://user-images.githubusercontent.com/28236780/152625863-57436241-4310-4ad5-8c30-e3235e72f076.png">
   * then the data table will appear, followed by a `count` of unique specimen IDs 
-  to stop the web program, use "control + c" in terminal to stop the program
+  * to stop the web program, use "control + c" in terminal to stop the program
