@@ -19,10 +19,11 @@ to run the script, either
   * enter "Y" to enter the first function.
   * first prompt will ask for number of files to be processed/combined.
     * (this is due to limitations of Epic Find Susceptibility Report limiting to 6 months.)
-  * then enter path to the Epic exported file and enter the password.
+  * then select the exported excel file from Epic in the dialog window.
     * <img width="456" alt="image" src="https://user-images.githubusercontent.com/28236780/155803043-923c6e4c-d892-4431-b089-933dd3b62a93.png">
+    * enter the password to the file in terminal/cmd.
     * this process will repeat until all files are imported.
-  * script will perform data transformation and export out two dataframes and export out as excel files:
+  * script will perform data transformation:
     * gram positives (first specimen removed, contains only Staphylococcus aureus, Enterococcus (excluding gallinarum and casseliflavus))
     * all results (unfiltered)   
   * Finally, enter the file name to save under the same folder: 
