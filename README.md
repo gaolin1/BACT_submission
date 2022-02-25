@@ -1,10 +1,11 @@
 ### **Requirements**
 - Python 3 (tested on versions 3.9 and 3.10 on mac/windows)
 - Required packages:
-1. [pandas](https://pandas.pydata.org/docs/getting_started/install.html) (command: `pip install pandas`)
-2. [msoffcypto](https://github.com/nolze/msoffcrypto-tool) (command: `pip install msoffcrypto-tool`)
-3. [streamlit](https://streamlit.io) (command: `pip install streamlit`)
-4. [numpy](https://numpy.org/install/) (command: `pip install numpy`)
+1. [pandas](https://pandas.pydata.org/docs/getting_started/install.html) (install command: `pip install pandas`)
+2. [msoffcypto](https://github.com/nolze/msoffcrypto-tool) (install command: `pip install msoffcrypto-tool`)
+3. [streamlit](https://streamlit.io) (install command: `pip install streamlit`)
+4. [numpy](https://numpy.org/install/) (install command: `pip install numpy`)
+5. [tkinter](https://docs.python.org/3/library/tkinter.html) (install command: `pip install tk`)
 ---
 
 to run the script, either 
@@ -17,14 +18,16 @@ to run the script, either
 * First function: Process Epic exported file
   * enter "Y" to enter the first function.
   * first prompt will ask for number of files to be processed/combined.
-  * (this is due to limitations of Epic Find Susceptibility Report limiting to 6 months.)
-  * then enter path to the first file, password, then repeat for all reports.
+    * (this is due to limitations of Epic Find Susceptibility Report limiting to 6 months.)
+  * then enter path to the Epic exported file and enter the password.
+    * <img width="456" alt="image" src="https://user-images.githubusercontent.com/28236780/155803043-923c6e4c-d892-4431-b089-933dd3b62a93.png">
+    * this process will repeat until all files are imported.
   * script will perform data transformation and export out two dataframes and export out as excel files:
     * gram positives (first specimen removed, contains only Staphylococcus aureus, Enterococcus (excluding gallinarum and casseliflavus))
     * all results (unfiltered)   
-  * Finally, enter path to procssed file with two excel pages (Complete and Frist Specimen (Gram Positive)).
-    * please remember to add the excel extension at the end (xlsx.
-    * to export within the same directory, simply enter the file name (sample.xlsx).
+  * Finally, enter the file name to save under the same folder: 
+    * <img width="459" alt="image" src="https://user-images.githubusercontent.com/28236780/155802354-3a5b29c7-b9d6-4ff7-9d8b-08afef6fc25a.png">
+    * to save under different folder, select the down arrow to expand the file dialog    
 ---
 > <img width="491" alt="image" src="https://user-images.githubusercontent.com/28236780/152627151-da286fb3-9c4b-4214-9311-ec53316280bc.png">
 * Second function: Web visualization tool for organism counts

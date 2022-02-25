@@ -11,6 +11,9 @@ import streamlit.bootstrap
 from streamlit import config as _config
 import sys
 from streamlit import cli as stcli
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
+from tkinter.filedialog import asksaveasfilename
 
 def main():
     process_input = input("Process Epic Exported File? (Y/N): ")
@@ -109,7 +112,7 @@ def import_combined():
 
 def import_df():
     decrypted = io.BytesIO()
-    read_path = input("Enter Epic Report Output Path: ")
+    read_path = get_file()
     key = input("Enter File Password: ")
     with open(read_path, "rb") as f:
         file = msoffcrypto.OfficeFile(f)
@@ -119,8 +122,18 @@ def import_df():
     #print(df)
     return df
 
+def get_file():
+    Tk().withdraw()
+    filename = askopenfilename(initialdir = "./", title = "Select file",filetypes = [("Excel Files","*.xlsx")])
+    return filename
+
+def export_file():
+    Tk().withdraw()
+    filename = asksaveasfilename(initialdir = "./", title = "Save file",filetypes = [("Excel Files","*.xlsx")])
+    return filename
+
 def export_df(df1, df2):
-    write_path = input("Enter location for output xlsx file: ")
+    write_path = export_file()
     write = pd.ExcelWriter(write_path, engine='xlsxwriter')
     df1.to_excel(write, "Complete")
     df2.to_excel(write, "First Specimen (Gram Positive)")
