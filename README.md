@@ -6,33 +6,32 @@
 3. [streamlit](https://streamlit.io) (install command: `pip install streamlit`)
 4. [numpy](https://numpy.org/install/) (install command: `pip install numpy`)
 5. [tkinter](https://docs.python.org/3/library/tkinter.html) (install command: `pip install tk`)
+6. [PySimpleGUI](https://www.pysimplegui.org/en/latest/) (install command: `pip install pysimplegui`)
 ---
 
-to run the script, either 
-1. enter `python3 find_it.py` in terminal (mac) or cmd (windows)
-2. use right click on the find_it.py file and launch with **python launcher** 
+to run the script, right click on the `simple_gui.py` file and launch with **python launcher** 
 ---
 
 ### This script has two function options
-> <img width="484" alt="image" src="https://user-images.githubusercontent.com/28236780/155803919-32f26232-615a-4770-a9d5-020675543a80.png">
+> <img width="744" alt="image" src="https://user-images.githubusercontent.com/28236780/189788476-23872f64-afb2-430f-b50c-7194cd4a33e0.png">
 * First function: Process Epic exported file
-  * enter "Y" to enter the first function.
-  * first prompt will ask for `number` of files to be processed/combined.
-    * (this is due to limitations of Epic Find Susceptibility Report limiting to 6 months.)
-  * then select the `exported excel file from Epic` in the dialog window.
-    * <img width="456" alt="image" src="https://user-images.githubusercontent.com/28236780/155803043-923c6e4c-d892-4431-b089-933dd3b62a93.png">
-    * enter the `password` to the file in terminal/cmd.
-    * this process will repeat until all files are imported.
+  * select `Browse` to select the Epic output Excel file
+  * enter the password below on the next field
+  * click on `Import` to import the data
+  * *optional* to import additional file, select `Click import additional exports`
+    * <img width="717" alt="image" src="https://user-images.githubusercontent.com/28236780/189789058-1fc3adcf-ed9f-452f-ae03-480669ec06b3.png">
+    * follow similar procedure as the first file, browse to select, enter password and then select `Import Additional`
+> <img width="734" alt="image" src="https://user-images.githubusercontent.com/28236780/189789326-150961d9-e4d6-41f6-9869-3aa6b8077b8a.png">
+  * Once ready, select `Process` to prep the data
+    * use Browse to enter the desired export file name, then select `Confirm`
   * script will perform data transformation:
     * `gram positives` (first specimen removed, contains only Staphylococcus aureus, Enterococcus (excluding gallinarum and casseliflavus))
     * `all` results (unfiltered)   
-  * Finally, enter the `file name` to save under the same folder: 
-    * <img width="459" alt="image" src="https://user-images.githubusercontent.com/28236780/155802354-3a5b29c7-b9d6-4ff7-9d8b-08afef6fc25a.png">
-    * to save under different folder, select the `down arrow` to expand the file dialog    
+
 ---
-> <img width="491" alt="image" src="https://user-images.githubusercontent.com/28236780/152627151-da286fb3-9c4b-4214-9311-ec53316280bc.png">
+> <img width="744" alt="image" src="https://user-images.githubusercontent.com/28236780/189788476-23872f64-afb2-430f-b50c-7194cd4a33e0.png">
 * Second function: Web visualization tool for organism counts
-  * enter "Y" to launch the streamlit app
+  * click `Launch Analytics Dashboard`
   * <img width="759" alt="image" src="https://user-images.githubusercontent.com/28236780/152625345-74a3d27e-fbe3-48f8-a712-f6ee45371678.png">
   * first use `browse files` to selec the processed file
   * then select either `complete data` or `first specimen only`
