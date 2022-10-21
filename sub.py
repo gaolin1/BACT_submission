@@ -40,8 +40,12 @@ def complete_data(df):
         df = prepare_df(df)
         df = checkbox(df, organism, "Specimen Type")
         show_df(df)
-        count = df["Specimen ID"].nunique()
-        st.metric(label="Count of unique specimen: ", value=count)
+        total_count = df["Specimen ID"].nunique()
+        st.metric(label="Count of total unique specimen: ", value=total_count)
+        suscep_df = df.set_index("Antibiotic Interpretation")
+        suscep_df = suscep_df.loc["Susceptible"]
+        suscep_count = suscep_df["Specimen ID"].nunique()
+        st.metric(label="Count of susceptible specimen: ", value=suscep_count)
     except AttributeError:
         pass
 
